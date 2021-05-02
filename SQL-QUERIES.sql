@@ -1,4 +1,4 @@
-# Query1:
+# QUERY1:
 
 Display the crew percentage for any picture type according to the range of years. (range of year and picture type will be selected by the user)
 
@@ -13,7 +13,7 @@ AND TITLETYPE='$titletype') T
 ON T.TCONST=P.TCONST
 GROUP BY P.CATEGORY) M
 
-# Query2:
+# QUERY2:
 
 Here is the data for a line graph where tv series are grouped according to the start year, number of seasons, max rating received showing a trend for ratings received for the year 1990-2004 for tv series with respective number of seasons. User can select the number of seasons and the year range.
 
@@ -91,7 +91,7 @@ AND M1.rn=M5.rn
 AND M1.rn=M6.rn
 
 
-# Query3:
+# QUERY3:
 
 Display the highest rated TV shows along with the  number of episodes, number of writer, director, actor, actress and user input : year range 
 
@@ -129,7 +129,8 @@ ON D.TCONST=E.TCONST
 ORDER BY C.AVERAGERATING DESC)
 WHERE ROWNUM<=10
 
-Query 4:
+                                                  
+# QUERY4:
 
 Line Graph - Display the percentage of male and female actors who have worked in any picture format which the user will select, arranged in the order of year range 1990-2005. The graph is showing us the trend of
 working male and females in the industry.
@@ -171,7 +172,7 @@ AND T1.TITLETYPE='video'
 AND T2.TITLETYPE='video'
 AND T3.TITLETYPE='video';
 
-#Query5: 
+# QUERY 5: 
 
 Here is the data for line graph, where the average rating for famous picture types(movie,tvEpisode,short,video and video game) are arranged according to the rating received by the director in a year range of 1990-2005. There are 5 lines (movie,tvEpisode,short,video and video game) each showing a trend of ratings average rating received per year by a director. 
 
@@ -246,7 +247,7 @@ AND T1.rn=T3.rn
 AND T1.rn=T4.rn
 AND T1.rn=T5.rn;
 
-Query 6:
+# QUERY 6:
 
 Display a Bar Graph for 4 lines(movie,tvMovie,tvEpisode,video) with average rating on y axis and run time on x axis. To compare the trend of ratings received on the basis of length of these popular picture formats. 
 
@@ -508,7 +509,7 @@ WHERE T1.rn=T2.rn
 AND T1.rn=T3.rn
 AND T1.rn=T4.rn) MS5) CT;
 
-Query 7:
+# QUERY 7:
 
 Display a Bar Graph for the top 5 countries which have produced the highest number of titles in the range of years 1990-2005; 
 the user can select the range of year.
@@ -563,7 +564,10 @@ AND FR.S5>1990
 AND FR.S5<2005) TOP5;
 
 
-QUERY8:
+# QUERY8:
+
+Display Graph for the top 10 languages in which movies,tvSeries,videos etc. are made and produced in. As the english language has the majority of picture formats being produced in, therefore we look at languages other
+than the 'english' language.  
 
 SELECT LT.S1,LT.L1,LT.C1,LT.R1,LT.S2,LT.L2,LT.C2,LT.R2,LT.S3,LT.L3,LT.C3,LT.R3,LT.S4,LT.L4,LT.C4,LT.R4,LT.S5,LT.L5,LT.C5,LT.R5,
 LT.S6,LT.L6,LT.C6,LT.R6,LT.S7,LT.L7,LT.C7,LT.R7,LT.S8,LT.L8,LT.C8,LT.R8,LT.S9,LT.L9,LT.C9,LT.R9,LT.S10,LT.L10,LT.C10,LT.R10
